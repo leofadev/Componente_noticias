@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.card{
+    width: 30rem;
+}
+.card-body{
+    width: 30rem;
+}
+
+@media (max-width: 430.98px) { 
+    .card{
+        margin-top: 25%;
+        width: 20rem;
+    }
+    .card-body{
+        width: 20rem;
+    }
+}
+.col-12, .container{
+    display: grid !important;
+    place-items: center !important;
+    
+}
+
+.container{
+    margin: 0% !important;
+    padding: 0% !important;
+    display: grid !important;
+    place-items: center !important;
+}

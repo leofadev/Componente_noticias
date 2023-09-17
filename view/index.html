@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="h1">Noticias</div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="card">
+                <img src="../img/img.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">El testimonio del arte</h5>
+                    <p class="card-text">Porque el arte muchas veces no es más que dolor transfigurado, Fernando Botero encontró en sus obras refugio, consuelo y fuerza,...</p>
+                    <button class="btn me_gusta">Me gusta</button>
+                    <button class="btn no_gusta">No me gusta</button>
+                    <button class="btn comentario">Comentar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <a href="#" class="btn">Me gusta</a> <p class=" reaction_meGusta btn btn-primary">0</p>
+                    <a href="#" class="btn">No me gusta</a> <p class="reaction_noMeGusta btn btn-primary">0</p>
+                    <a href="#" class="btn">Comentarios</a> <p class="btn btn-primary">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button id="botonMeGusta">Me gusta</button>
+    <p id="contador">0</p>
+
+    <script>
+        // Obtener una referencia al botón y al contador
+        const botonMeGusta = document.getElementById('botonMeGusta');
+        const contador = document.getElementById('contador');
+
+        // Inicializar el estado del botón (sin "Me gusta" inicialmente)
+        let liked = false;
+        let likes = 0;
+
+        // Mostrar la cantidad inicial de "Me gusta"
+        contador.textContent = likes;
+
+        // Agregar un evento de clic al botón
+        botonMeGusta.addEventListener('click', function () {
+            if (liked) {
+                likes--; // Decrementar el contador si ya le dio "Me gusta"
+            } else {
+                likes++; // Incrementar el contador si no había dado "Me gusta"
+            }
+            
+            // Actualizar el estado del botón y el contador
+            liked = !liked;
+            contador.textContent = likes;
+            
+            // Actualizar el texto del botón según el estado actual
+            botonMeGusta.textContent = liked ? "Quitar Me gusta" : "Me gusta";
+        });
+    </script>
+
+
+
+    <!-- Scripts JS -->
+    <script src="../js/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+</body>
+</body>
+</html>
