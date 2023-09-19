@@ -8,6 +8,10 @@
 .card-body{
     width: 30rem;
 }
+.h4{
+    display: grid !important;
+    place-items: center !important;
+}
 
 @media (max-width: 430.98px) { 
     .card{
